@@ -3,60 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Martin Muli | Portfolio</title>
+    <title>Martin Muli | Cybersecurity & Tech Innovation</title>
     <style>
-        /* Professional & Readable Style - Rubric Step 10 Compliant */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #2c3e50; margin: 0; padding: 0; background-color: #f8f9fa; }
-        header { background: #1a252f; color: #ffffff; padding: 3rem 1rem; text-align: center; }
-        nav { background: #2c3e50; padding: 1rem; text-align: center; position: sticky; top: 0; }
-        nav a { color: #ecf0f1; margin: 0 15px; text-decoration: none; font-weight: 500; font-size: 1.1rem; }
-        nav a:hover { color: #3498db; }
-        .container { max-width: 900px; margin: 2rem auto; padding: 2rem; background: #ffffff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { margin: 0; font-size: 2.8rem; letter-spacing: 1px; }
-        .tagline { font-style: italic; color: #bdc3c7; font-size: 1.3rem; margin-top: 10px; }
-        h2 { border-bottom: 2px solid #3498db; padding-bottom: 10px; color: #1a252f; }
-        footer { text-align: center; padding: 3rem; color: #95a5a6; font-size: 0.9rem; }
-        .placeholder-box { background: #ecf0f1; border: 1px dashed #bdc3c7; padding: 20px; border-radius: 5px; text-align: center; color: #7f8c8d; }
+        :root {
+            --primary-dark: #1a252f; 
+            --accent-blue: #2c3e50;  
+            --link-hover: #3498db;
+            --text-main: #333333;
+            --bg-light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.8; 
+            color: var(--text-main); 
+            margin: 0; padding: 0; 
+            background-color: var(--bg-light); 
+            scroll-behavior: smooth;
+        }
+
+        header { 
+            background: var(--primary-dark); 
+            color: var(--white); 
+            padding: 5rem 1.5rem; 
+            text-align: center; 
+        }
+
+        nav { 
+            background: var(--accent-blue); 
+            padding: 1rem; 
+            text-align: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav a { 
+            color: #ecf0f1; 
+            margin: 0 15px; 
+            text-decoration: none; 
+            font-weight: 600; 
+            transition: 0.3s;
+        }
+
+        nav a:hover { color: var(--link-hover); }
+
+        .container { 
+            max-width: 900px; 
+            margin: 3rem auto; 
+            padding: 3rem; 
+            background: var(--white); 
+            border-radius: 15px; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); 
+        }
+
+        h2 { border-bottom: 3px solid var(--link-hover); padding-bottom: 10px; color: var(--primary-dark); }
+
+        /* Skills Tags Styling */
+        .skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+        .skill-tag { 
+            background: #e1e8ed; 
+            color: var(--accent-blue); 
+            padding: 5px 15px; 
+            border-radius: 20px; 
+            font-size: 0.9rem; 
+            font-weight: bold; 
+        }
+
+        /* Project Card Styling */
+        .project-card {
+            background: #fdfdfd;
+            border: 1px solid #eee;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: var(--link-hover);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: #2980b9; transform: translateY(-2px); }
+
+        .social-links a {
+            margin-right: 20px;
+            color: var(--accent-blue);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer { text-align: center; padding: 3rem; background: var(--white); color: #7f8c8d; }
+
+        @media (max-width: 600px) {
+            .container { margin: 1rem; padding: 1.5rem; }
+            nav a { display: inline-block; margin: 5px 10px; }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <h1>Martin Muli</h1>
-        <p class="tagline">Aspiring Software Engineer | Dedicated to Scalable Tech Solutions</p>
+        <p style="font-size: 1.4rem; font-style: italic; opacity: 0.8;">Cybersecurity Specialist | Tech Innovator</p>
     </header>
 
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#pitch">Elevator Pitch</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#pitch">Pitch</a>
         <a href="#contact">Contact</a>
     </nav>
 
     <section class="container" id="about">
         <h2>About Me</h2>
-        <p>I am a highly motivated aspiring software engineer with a focus on building efficient, user-centric applications. With a background in technical problem-solving and a passion for modern development frameworks, I aim to contribute to innovative projects that solve real-world challenges.</p>
+        <p>I am a tech innovator dedicated to securing Africa’s digital future. My work focuses on <strong>Cybersecurity</strong> and building secure, scalable platforms to address the employment crisis for university graduates in Kenya. I combine a disciplined technical approach with a passion for social impact.</p>
+        
+        <h3>Core Skills</h3>
+        <div class="skills-container">
+            <span class="skill-tag">Cybersecurity</span>
+            <span class="skill-tag">Software Engineering</span>
+            <span class="skill-tag">Network Security</span>
+            <span class="skill-tag">Agile Project Management</span>
+            <span class="skill-tag">Risk Assessment</span>
+            <span class="skill-tag">Data Privacy</span>
+        </div>
     </section>
 
-    <section class="container" id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="placeholder-box">
-            <p><strong>ALX AI Career Essentials Project Showcase</strong></p>
-            <p>Case studies, technical documentation, and project slides will be uploaded here.</p>
+    <section class="container" id="projects">
+        <h2>Key Projects</h2>
+        <div class="project-card">
+            <h3>Secure Employment Platform</h3>
+            <p>A software-based solution designed to help graduates in Nakuru and Nairobi find entry-level opportunities while ensuring user data integrity through robust security protocols.</p>
+            <a href="#" class="btn">View Documentation</a>
         </div>
     </section>
 
     <section class="container" id="pitch">
         <h2>Elevator Pitch</h2>
-        <div class="placeholder-box">
-            <p>My professional elevator pitch video is currently in production and will be available here for Week 12.</p>
+        <div style="text-align: center; padding: 40px; border: 2px dashed #ccc; border-radius: 10px;">
+            <p>Video Presentation coming soon for Final Milestone Review.</p>
         </div>
     </section>
 
     <section class="container" id="contact">
-        <h2>Contact</h2>
-        <p>I am always open to networking and professional opportunities. Feel free to reach out via email.</p>
-        <p><strong>Email:</strong> [Insert your professional email here]</p>
+        <h2>Let's Connect</h2>
+        <p>I am always looking to collaborate on secure tech solutions or discuss the future of the African digital economy.</p>
+        <p><strong>Email:</strong> <a href="mailto:mulimm00@gmail.com" style="color: var(--link-hover);">mulimm00@gmail.com</a></p>
+        <div class="social-links">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+        </div>
     </section>
 
     <footer>
@@ -65,3 +171,4 @@
 
 </body>
 </html>
+
